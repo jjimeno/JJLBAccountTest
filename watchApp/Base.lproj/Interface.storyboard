@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Main Page Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="MainPageInterfaceController" customModule="watchApp_Extension">
+                    <items>
+                        <table alignment="left" id="HZB-Ar-rWi">
+                            <items>
+                                <tableRow identifier="DefaultTableRowController" id="CJD-HP-rkT" customClass="DefaultRowController" customModule="watchApp_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="4Ik-7N-pOL">
+                                        <items>
+                                            <label width="125" height="45" alignment="left" text="Label" id="ydd-aY-ai4"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lbl" destination="ydd-aY-ai4" id="xJZ-ba-5PI"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="HZB-Ar-rWi" id="FGY-MS-QgC"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--Full Account List-->
+        <scene sceneID="Glw-7Q-xM9">
+            <objects>
+                <controller identifier="AccountListInterfaceControllerFull" title="Full Account List" id="Fnc-7j-68S" customClass="AccountListInterfaceControllerFull" customModule="watchApp_Extension">
+                    <items>
+                        <table alignment="left" id="dub-Jh-FnP">
+                            <items>
+                                <tableRow identifier="AccountDefaultListRowController" id="Qt0-va-WqD" customClass="AccountDefaultListRowController" customModule="watchApp_Extension">
+                                    <group key="rootItem" width="1" height="155" alignment="left" layout="vertical" id="Br5-rP-Cl9">
+                                        <items>
+                                            <label width="121" height="21" alignment="left" text="Acc number" id="VfY-j2-7NR" userLabel="accountNumber"/>
+                                            <label width="121" height="21" alignment="left" text="Label" numberOfLines="0" id="zgR-Zb-Kh6" userLabel="accountNumberValue"/>
+                                            <label width="121" height="21" alignment="left" text="Iban" id="GFb-68-VS4" userLabel="Iban"/>
+                                            <label width="121" height="21" alignment="left" text="Label" numberOfLines="0" id="vEj-PH-LHA" userLabel="IbanValue"/>
+                                            <label width="121" height="21" alignment="left" text="Balance" id="m0Q-7n-XzO" userLabel="Balance"/>
+                                            <label width="121" height="21" alignment="left" text="Label" numberOfLines="0" id="yef-5g-4KD" userLabel="BalanceValue"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblAccountNumber" destination="zgR-Zb-Kh6" id="M4p-WY-Vku"/>
+                                        <outlet property="lblBalance" destination="yef-5g-4KD" id="4oc-pf-zeM"/>
+                                        <outlet property="lblIBan" destination="vEj-PH-LHA" id="ZEK-Ab-U5s"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="dub-Jh-FnP" id="729-zX-JTN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="558" y="-476"/>
+        </scene>
+        <!--List of visibles-->
+        <scene sceneID="OgJ-7M-i7a">
+            <objects>
+                <controller identifier="AccountListInterfaceControllerVisibleOnly" title="List of visibles" id="AAX-Gi-l3q" customClass="AccountListInterfaceControllerVisibleOnly" customModule="watchApp_Extension">
+                    <items>
+                        <table alignment="left" id="FU7-8I-xHF">
+                            <items>
+                                <tableRow identifier="AccountDefaultListRowController" id="1A7-Bs-3cs" customClass="AccountDefaultListRowController" customModule="watchApp_Extension">
+                                    <group key="rootItem" width="1" height="155" alignment="left" layout="vertical" id="QlM-qh-vHH">
+                                        <items>
+                                            <label width="121" height="21" alignment="left" text="Acc number" id="CnL-uW-mG9" userLabel="accountNumber"/>
+                                            <label width="121" height="21" alignment="left" text="Label" numberOfLines="0" id="dd0-Qg-dW8" userLabel="accountNumberValue"/>
+                                            <label width="121" height="21" alignment="left" text="Iban" id="Lbc-C3-Lbj" userLabel="Iban"/>
+                                            <label width="121" height="21" alignment="left" text="Label" numberOfLines="0" id="Mv2-OW-TCj" userLabel="IbanValue"/>
+                                            <label width="121" height="21" alignment="left" text="Balance" id="Nyu-cG-mHz" userLabel="Balance"/>
+                                            <label width="121" height="21" alignment="left" text="Label" numberOfLines="0" id="mFr-pl-Tya" userLabel="BalanceValue"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblAccountNumber" destination="dd0-Qg-dW8" id="qT4-GL-ASe"/>
+                                        <outlet property="lblBalance" destination="mFr-pl-Tya" id="Krc-kw-s9b"/>
+                                        <outlet property="lblIBan" destination="Mv2-OW-TCj" id="Ewl-cP-5wo"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="FU7-8I-xHF" id="hF9-oc-1aA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="612" y="-65"/>
+        </scene>
+    </scenes>
+</document>
